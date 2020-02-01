@@ -1,0 +1,28 @@
+﻿<!-- at model se debe incluir cuando se utilizan modelos-->
+<!-- la sintaxis at {} se utiliza para incluir codigo c# utilizando razor-->
+<!--Se puede incluir metodos con razor directamente en la vista pero no se recomienda-->
+@model SignoZodiaco.Models.SignosZodiaco
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ZodiacForm</title>
+</head>
+<body>
+    <form asp-action="ZodiacForm" method="post">
+        <p>
+            <label for="Birthdate">Mes Cumpleaños:</label>
+            <!--se utiliza required para obligar el llenado del campo-->
+            <!--esto seria html puro; se puede utilizar asp-for en vez de for-->
+            <!--para establecer los elementos automaticamente (id y name)-->
+            <input id="Birthdate" required="" type="date" name="Fecha" />
+        </p>
+        <button type="submit">Registrar</button>
+    </form>
+</body>
+</html>
+

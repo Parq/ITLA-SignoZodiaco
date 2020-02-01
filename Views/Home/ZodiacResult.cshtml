@@ -1,0 +1,23 @@
+﻿@model SignoZodiaco.Models.SignosZodiaco
+@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ZodiacResult</title>
+</head>
+<body>
+    
+    <div>
+        <p>
+            Tu signo zodiacal es @ViewBag.Signo
+        </p>
+        <!--instruccion utilizada para agregar una referencia (href) del elemento "a"-->
+        <!-- que contiene un URL para el metodo de action-->
+        <a asp-action="Index">Determinar otro signo zodiacal</a>
+    </div>
+</body>
+</html>
